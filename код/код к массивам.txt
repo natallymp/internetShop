@@ -1,0 +1,53 @@
+$id = 1;
+    $name = 'Iphone';
+    $desc = 'Здесь будет описание для телефона Iphone';
+    $img = '/images/goods/iphone.jpg';
+    $price = '2000 $';
+
+    echo $id . '<br>';
+    echo $name . '<br>';
+    echo $desc . '<br>';
+    echo $img . '<br>';
+    echo $price . '<br>';
+
+    $product = [1, 'Iphone', 'Здесь будет описание для телефона Iphone', '/images/goods/iphone.jpg', '2000 $'];
+    $product = [
+        'id' => 1,
+        'name' => 'Iphone',
+        'desc' => 'Здесь будет описание для телефона Iphone',
+        'img' => '/images/goods/iphone.jpg',
+        'price' => '2000 $',
+
+    ];
+    /*var_dump($product);*/
+    echo $product['name'] . '<br>';
+    echo $product['desc'] . '<br>';
+    $product['count']=162;
+    var_dump($product);
+
+
+
+---------------------------------
+$goods[] = [
+        'id' => 4,
+        'name' => 'Explay',
+        'desc' => 'Описание для Explay',
+        'img' => '/images/goods/explay.jpg',
+        'price' => '800 $',
+        'discount' => 20,
+        'count' => 34,
+     ];
+     $goods[2]['discount'] = 20;
+     echo '<pre>';
+     var_dump($goods);
+
+--------------------------------
+foreach ($goods as $key => $good) {
+        echo 'Ключ массива: ' . $key. '<br>';
+         echo $good['id'] . '<br>';
+         echo $good['name'] . '<br>';
+         echo $good['desc'] . '<br>';
+         echo $good['img'] . '<br>';
+         echo $good['price'] . '<br>';
+         echo '<hr>';
+     }
